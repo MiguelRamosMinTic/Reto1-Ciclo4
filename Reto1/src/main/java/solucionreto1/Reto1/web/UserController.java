@@ -42,9 +42,9 @@ public class UserController {
     
     @GetMapping("/{email}")
     public boolean existsEmail(@PathVariable("email") String email){
-        return true;
+        return service.verificarEmail(email);
     }
-    
+
     @GetMapping("/{email}/{password}")
     public User existsUser(@PathVariable("email") String email, @PathVariable("password") String password){
         return null;

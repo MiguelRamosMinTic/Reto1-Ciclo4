@@ -65,4 +65,13 @@ public class UserService {
         }).orElse(false);
         return d;
     }
+    
+    public boolean verificarEmail(String email){
+        if(repository.chequearEmail(email).isEmpty()){
+            return false;
+        }else{
+            return true;
+        }
+    }
+    
 }

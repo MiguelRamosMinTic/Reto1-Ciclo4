@@ -33,4 +33,9 @@ public class UserRepository {
     public void delete(User u) {
         repository.delete(u);
     }
+    
+    public List<User> chequearEmail(String email){
+        return repository.findByEmail(email);
+    }
+    
 }
