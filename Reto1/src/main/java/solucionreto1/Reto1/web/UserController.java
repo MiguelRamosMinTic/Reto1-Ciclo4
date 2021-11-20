@@ -45,8 +45,9 @@ public class UserController {
         return service.verificarEmail(email);
     }
 
-    @GetMapping("/{email}/{password}")
-    public User existsUser(@PathVariable("email") String email, @PathVariable("password") String password){
-        return null;
-    }
+//    @GetMapping("/{email}/{password}")
+//    public User existsUser(@PathVariable("email") String email, @PathVariable("password") String password){
+//        return service.verificarEmailPassword(email, password);
+//    }
+    
 }

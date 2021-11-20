@@ -22,7 +22,7 @@ public class UserRepository {
         return (List<User>) repository.findAll();
     }
 
-    public Optional<User> getUser(int id) {
+    public Optional<User> getUserById(int id) {
         return repository.findById(id);
     }
 
@@ -34,8 +34,16 @@ public class UserRepository {
         repository.delete(u);
     }
     
+    public List<User> getUsersByNameOrEmail(String name, String email){
+        return repository.findByNameOrEmail(name,email);
+    }
+    
     public List<User> chequearEmail(String email){
         return repository.findByEmail(email);
     }
+    
+//    public Optional<User> getUserEmailAndPassword(String email, String password){
+//        return repository.findByPasswordEmail(email, password);
+//    }
     
 }
