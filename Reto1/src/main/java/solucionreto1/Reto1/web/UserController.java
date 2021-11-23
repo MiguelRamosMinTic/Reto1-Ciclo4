@@ -16,7 +16,7 @@ import solucionreto1.Reto1.service.UserService;
 
 
 @RestController
-@RequestMapping("User")
+@RequestMapping("user")
 @CrossOrigin(origins = "*")
 public class UserController {
 
